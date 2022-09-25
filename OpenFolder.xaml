@@ -1,0 +1,35 @@
+﻿<Page x:Class="BackgroundWorker.OpenFolder"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BackgroundWorker"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      Title="OpenFolder">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="430"/>
+            <ColumnDefinition Width="90"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+
+        </Grid.RowDefinitions>
+        <Label Content="Select Folder:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox Name="selectedFolder" Width="400" FontSize="20" Height="30" Foreground="Navy" Grid.Column="1" VerticalContentAlignment="Center"/>
+        <Button Content="Select" Width="60" Height="32" Grid.Column="2" Click="btnSelectFolder_Clicked"/>
+        <Label Grid.Row="1" Content="# of files:" HorizontalAlignment="Right"/>
+        <TextBlock Name="numberOfFiles" Grid.Column="1" Grid.Row="1" Width="100" Height="32"/>
+        <Label Content="File name:" Grid.Row="2" HorizontalAlignment="Right"/>
+        <TextBlock Name="fileName" Grid.Row="2" Grid.Column="1" Width="400" VerticalAlignment="Center"/>
+        <ProgressBar Name="progressBar" Foreground="Green" Width="400" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" Height="40"/>
+    </Grid>
+</Page>
